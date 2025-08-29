@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "SpaceGrotesk";
   src: url("../fonts/SpaceGrotesk-Bold.woff2");
@@ -649,6 +650,10 @@ template {
 .running-line {
   overflow: hidden;
   border: 1px solid;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 3;
 }
 .running-line .running-line__content {
   display: flex;
@@ -716,8 +721,10 @@ template {
   align-items: center;
   border-bottom: 1px solid black;
   padding: 0 30px 0 30px;
-  position: relative;
-  z-index: 1;
+  position: sticky;
+  background-color: white;
+  top: 17px;
+  z-index: 2;
 }
 .navigation .navigation__dropdown {
   background-color: white;
@@ -915,12 +922,11 @@ template {
 }
 
 .search {
-  z-index: 2;
-  position: absolute;
+  z-index: 4;
+  position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
   align-items: center;
@@ -934,8 +940,8 @@ template {
 }
 
 .cart {
-  z-index: 2;
-  position: absolute;
+  z-index: 4;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -945,7 +951,7 @@ template {
 }
 .cart .cart__content {
   width: 500px;
-  height: 100%;
+  height: 100vh;
   background-color: white;
   margin-left: auto;
   display: grid;
@@ -1227,6 +1233,9 @@ template {
   border: 1px solid black;
 }
 
+.photoshoot {
+  z-index: 0;
+}
 .photoshoot .photoshoot__title {
   font-size: 20px;
   font-weight: 500;
@@ -1238,6 +1247,104 @@ template {
     padding: 12px 8px;
   }
 }
+.photoshoot .photoshoot__slider {
+  z-index: -1;
+  height: 600px;
+}
+.photoshoot .photoshoot__slider .swiper {
+  width: 100%;
+  height: 100%;
+}
+.photoshoot .photoshoot__slider .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+}
+.photoshoot .photoshoot__slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photoshoot .photoshoot__slider .swiper-pagination-bullet {
+  background: rgba(243, 163, 79, 0.54);
+  opacity: 1;
+}
+.photoshoot .photoshoot__slider .swiper-pagination-bullet-active {
+  background: darkorange; /* цвет активного */
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__header {
+  border-top: 1px solid black;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  padding: 8px 0;
+  flex-wrap: wrap;
+}
+.footer .footer__header .footer__link {
+  font-size: 14px;
+  transition: 0.3s ease;
+  color: black;
+}
+.footer .footer__header .footer__link:hover {
+  font-size: 12px;
+  padding-top: 2px;
+  cursor: pointer;
+}
+.footer .footer__body {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 14px 0;
+}
+.footer .footer__body .footer__text {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.footer .footer__body .footer__form {
+  position: relative;
+}
+.footer .footer__body .footer__form .footer__email-input {
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 4px 100px 4px 8px;
+}
+.footer .footer__body .footer__form .footer__subscribe-button {
+  background-color: darkorange;
+  padding: 7px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.footer .footer__footer {
+  border-top: 1px solid black;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2px 30px;
+  font-size: 14px;
+  align-items: center;
+}
+.footer .footer__footer .footer__logo {
+  font-size: 25px;
+  font-weight: 600;
+}
+
 :root {
   font-family: SpaceGrotesk;
 }

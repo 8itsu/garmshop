@@ -1,6 +1,6 @@
-.photoshoot{
-
-  .photoshoot__title{
+.photoshoot {
+  z-index: 0;
+  .photoshoot__title {
     font-size: 20px;
     font-weight: 500;
     padding: 12px 30px;
@@ -10,7 +10,40 @@
     }
   }
 
-  .photoshoot__slider{
+  .photoshoot__slider {
+    z-index: -1;
+    height: 600px;
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba(243, 163, 79, 0.54);
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: darkorange; /* цвет активного */
+    }
+
 
   }
 }

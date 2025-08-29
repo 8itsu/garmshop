@@ -50,7 +50,6 @@ searchArea.addEventListener('click', (e)=>{
     if (e.target === searchArea){
         searchArea.classList.toggle('visible')
     }
-
 })
 
 //Корзина
@@ -71,3 +70,22 @@ cart.addEventListener('click', (e)=>{
         cart.classList.toggle('visible')
     }
 })
+
+//Таймер
+const htmlTime = document.querySelector('.header__current-time')
+
+function time(){
+    const date = new Date();
+    const franceTime = new Date(
+        date.toLocaleString("en-US", { timeZone: "Europe/Paris" })
+    );
+
+    const hours = franceTime.getHours()
+    const minutes = franceTime.getMinutes()
+    const seconds = franceTime.getSeconds()
+
+    const timeStr = `${hours}:${minutes}:${seconds}`
+
+    htmlTime.innerText = timeStr
+}
+setInterval(time, 1000)

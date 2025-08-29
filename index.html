@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="styles/main.css">
     <script src="index.js" type="module" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
     <div class="running-line">
@@ -181,11 +185,68 @@
 
         </div>
     </section>
+
     <section class="photoshoot">
         <h1 class="photoshoot__title">COLLECTIONS PHOTOSHOOT</h1>
-        <div class="photoshoot__slider"></div>
-    </section>
+        <div class="photoshoot__slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/slider1.png"></div>
+                    <div class="swiper-slide"><img src="images/slider2.png"></div>
+                    <div class="swiper-slide"><img src="images/slider3.png"></div>
+                    <div class="swiper-slide"><img src="images/slider4.png"></div>
+                    <div class="swiper-slide"><img src="images/slider5.png"></div>
+                    <div class="swiper-slide"><img src="images/slider6.png"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
 
+            <!-- Swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        812: {
+                            slidesPerView: 2,
+                        }
+                    },
+                });
+            </script>
+        </div>
+    </section>
+    w
+    <footer class="footer">
+        <div class="footer__header">
+            <a class="footer__link">TWITTER</a>
+            <a class="footer__link">INSTAGRAM</a>
+            <a class="footer__link">TIKTOK</a>
+            <a class="footer__link">FAQ</a>
+            <a class="footer__link">CONTACT</a>
+            <a class="footer__link">REFUNDS</a>
+            <a class="footer__link">TERMS</a>
+            <a class="footer__link">POLICY</a>
+        </div>
+        <div class="footer__body">
+            <p class="footer__text">BE THE FIRST TO HEAR OF RELEASES:</p>
+            <form class="footer__form">
+                <input type="email" required class="footer__email-input">
+                <button type="submit" class="footer__subscribe-button">SUBSCRIBE</button>
+            </form>
+        </div>
+        <div class="footer__footer">
+            <span>BY 8ITSU</span>
+            <h1 class="footer__logo">GARM</h1>
+            <span>©2025, GARM.</span>
+        </div>
+    </footer>
 
 
     <div class="search">

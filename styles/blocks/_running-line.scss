@@ -6,6 +6,10 @@
 .running-line{
   overflow: hidden;
   border: 1px solid;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 3;
 
   .running-line__content{
     display: flex;
