@@ -1,0 +1,16 @@
+.photoshoot{
+
+  .photoshoot__title{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 30px;
+    @media (max-width: 812px) {
+      font-size: 14px;
+      padding: 12px 8px;
+    }
+  }
+
+  .photoshoot__slider{
+
+  }
+}

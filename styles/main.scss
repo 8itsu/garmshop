@@ -1,0 +1,15 @@
+@use "fonts";
+@use "reset";
+@use "variables";
+
+@use "blocks/running-line";
+@use "blocks/header";
+@use "blocks/navigation";
+@use "blocks/banner";
+@use "blocks/catalog";
+@use "blocks/photoshoot";
+
+
+:root{
+  font-family: SpaceGrotesk;
+}
